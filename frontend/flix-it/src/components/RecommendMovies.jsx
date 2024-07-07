@@ -7,7 +7,7 @@ const RecommendMovies = () => {
 
   const getRecommendations = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/recommend', { movie_name: movieName });
+      const response = await axios.post('https://flix-it.onrender.com/api/recommend', { movie_name: movieName });
       setRecommendations(response.data.recommendations);
     } catch (error) {
       console.error('Error fetching recommendations:', error);
